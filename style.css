@@ -47,7 +47,9 @@ input.display {
     word-wrap: break-word;
 }
 
-
+input::placeholder {
+    color: white;
+}
 
 
 
