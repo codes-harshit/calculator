@@ -33,7 +33,7 @@ Array.from(buttons).forEach((button)=>{
             document.querySelector("input").value = string;
         }
         else if (opers.includes(e.target.innerHTML)){
-            let lastchar1 = string.charAt(string.length-1);
+            let lastchar1 = string[string.length-1];
             console.log("The last char1 "+ lastchar1);
             if (opers.includes(lastchar1) === false){
                 string = string + e.target.innerHTML;
@@ -58,8 +58,8 @@ document.addEventListener("keydown", function (ev){
         
     }
     else if(opers.includes(keyvalue)) {
-        let lastchar = string.charAt(string.length-1);
-        // console.log("the last char was"+ lastchar)
+        let lastchar = string[string.length-1];
+        console.log("the last char was"+ lastchar)
         if (opers.includes(lastchar) === false){
             string = string + keyvalue;
             document.querySelector("input").value = string;
@@ -68,6 +68,7 @@ document.addEventListener("keydown", function (ev){
     }
     else if (keyvalue === "Enter"){
         var answer = eval(string);
+        console.log(answer)
         document.querySelector("input").value = answer;
         string = answer;
     }
